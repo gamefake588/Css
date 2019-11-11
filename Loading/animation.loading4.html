@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      height: 100vh;
+      background: #db5800;
+    }
+
+    .vertical {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .box {
+      position: relative;
+    }
+
+    .box div {
+      width: 20px;
+      height: 20px;
+      background-color: #fff;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .box div:nth-child(1) {
+      left: 100px;
+      animation: Loading 3s linear infinite -0.6s;
+    }
+
+    .box div:nth-child(2) {
+      left: 70px;
+      animation: Loading 3s linear infinite -1.2s;
+    }
+
+    .box div:nth-child(3) {
+      left: 40px;
+      animation: Loading 3s linear infinite -1.8s;
+    }
+
+    .box div:nth-child(4) {
+      left: 10px;
+      animation: Loading 3s linear infinite -2.4s;
+    }
+
+    .box div:nth-child(5) {
+      left: -20px;
+      animation: Loading 3s linear infinite;
+    }
+
+    @keyframes Loading {
+
+      0%,
+      100% {
+        left: 100px;
+        top: 0;
+      }
+
+      80% {
+        left: -20px;
+        top: 0;
+        width: 20px;
+        height: 20px;
+      }
+
+      85% {
+        left: -20px;
+        top: -30px;
+        width: 20px;
+        height: 20px;
+      }
+
+      90% {
+        width: 40px;
+        height: 15px;
+      }
+
+      95% {
+        left: 100px;
+        top: -30px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>
+    利用animation延迟执行设置负数提前执行
+    1. 0|100% 的位置相同
+    2. 80% 球向左移动
+    3. 85% 球向上移动
+    4. 90% 改变球的宽高使其想椭圆形
+    5. 95% 球体在当前的基础上回到对应初始的X轴
+  </noscript>
+
+  <div class="vertical">
+    <div class="box">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <script>
+
+  </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      background: #FCEAFC;
+    }
+
+    .vertical {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .box {
+      width: 500px;
+      overflow: hidden;
+    }
+
+    .box div {
+      width: 0%;
+      transition: all 1s;
+      height: 50px;
+    }
+
+    .box div:nth-child(1) {
+      background: #f25774;
+      animation: Loading 3s infinite;
+    }
+
+    .box div:nth-child(2) {
+      background: #ffb65b;
+      animation: Loading 3s 0.1s infinite;
+    }
+
+    .box div:nth-child(3) {
+      background: #fdda74;
+      animation: Loading 3s 0.2s infinite;
+    }
+
+    .box div:nth-child(4) {
+      background: #4cbe5d;
+      animation: Loading 3s 0.3s infinite;
+    }
+
+    .box div:nth-child(5) {
+      background: #4080ff;
+      animation: Loading 3s 0.4s infinite;
+    }
+
+    .box div:nth-child(6) {
+      background: #7b64c0;
+      animation: Loading 3s 0.5s infinite;
+    }
+
+    @keyframes Loading {
+
+      0% {
+        width: 0%;
+        transform: translateX(0%);
+      }
+
+      50% {
+        width: 100%;
+        transform: translateX(0%);
+      }
+
+      60% {
+        width: 100%;
+        transform: translateX(0%);
+      }
+
+      100% {
+        width: 100%;
+        transform: translateX(120%);
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="vertical">
+    <div class="box">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <script>
+
+
+    // const div = document.querySelector('.box').getElementsByTagName('div')
+    // let oneS = 0
+    // let twoS = 2
+
+    // initLoading(div, oneS, twoS)
+    // goLoading()
+
+    // function initLoading(div, oneS, twoS) {
+    //   for (let i = 0; i < div.length; i++) {
+    //     div[i].style.animation = `2s ${oneS}s ease-out Loading, 2s ${twoS}s ease forwards Loading2`;
+    //     oneS += 0.2
+    //     twoS += 0.2
+    //   }
+    // }
+
+    // function goLoading() {
+    //   setInterval(() => {
+
+    //     for (let i = 0; i < div.length; i++) {
+    //       div[i].style.animation = ""
+    //       setTimeout(() => {
+    //         div[i].style.animation = `2s ${oneS}s ease-out Loading, 2s ${twoS}s ease forwards Loading2`;
+    //         oneS += 0.2
+    //         twoS += 0.2
+    //       }, 100)
+    //     }
+
+    //     oneS = 0
+    //     twoS = 2
+    //   }, 5000)
+    // }
+
+
+
+
+  </script>
+
+
+
+</body>
+
+</html>

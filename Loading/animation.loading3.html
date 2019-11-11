@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      height: 100vh;
+      background: #37474f;
+    }
+
+    .vertical {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box div {
+      border: 1px solid #ffffff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .box div::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #3ff9dc;
+      left: -5px;
+    }
+
+    .circles-xl {
+      width: 200px;
+      height: 200px;
+      animation: Loading 15s linear infinite;
+    }
+
+    .circles-l {
+      width: 150px;
+      height: 150px;
+      animation: Loading 10s linear infinite;
+    }
+
+    .circles-m {
+      width: 100px;
+      height: 100px;
+      animation: Loading 6s linear infinite;
+    }
+
+    .circles-s {
+      border: none !important;
+      width: 50px;
+      height: 50px;
+      background-color: #ffab91;
+      animation: Loading 10s linear infinite;
+    }
+
+    .circles-s::after {
+      display: none !important;
+    }
+
+    @keyframes Loading {
+      100% {
+        transform: rotate(720deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="vertical">
+    <div class="box">
+      <div class="circles-xl">
+        <div class="circles-l">
+          <div class="circles-m">
+            <div class="circles-s"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+  </script>
+
+
+
+</body>
+
+</html>
