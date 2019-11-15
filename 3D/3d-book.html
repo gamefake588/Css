@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="3d-book.css">
+</head>
+
+<body>
+
+  <div class="vertical">
+    <div class="box">
+      <!-- 1 -->
+      <div class="box-left z-1 box-left-z1" data-page="1">
+
+      </div>
+      <div class="box-right z-1 box-right-z1" data-page="1">
+        <!-- 下一页 -->
+        <div class="next">
+          <input type="radio" name="next" data-page="2">
+          <label for="next"></label>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="box-left z-2" data-page="2">
+        <!-- 上一页 -->
+        <div class="up">
+          <input type="radio" name="up" data-page="1">
+          <label for="up"></label>
+        </div>
+      </div>
+      <div class="box-right z-2" data-page="2">
+        <!-- 下一页 -->
+        <div class="next">
+          <input type="radio" name="next" data-page="3">
+          <label for="next"></label>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="box-left z-3" data-page="3">
+        <!-- 上一页 -->
+        <div class="up">
+          <input type="radio" name="up" data-page="2">
+          <label for="up"></label>
+        </div>
+      </div>
+      <div class="box-right z-3" data-page="3">3</div>
+    </div>
+  </div>
+
+ <script src="./3d-book.js"></script>
+
+</body>
+
+</html>

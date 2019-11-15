@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #fff;
+}
+
+.vertical {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box {
+  display: flex;
+  position: relative;
+  width: 70vw;
+  height: 80vh;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.box>div {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.box>div:nth-child(even) {
+  left: 50%;
+}
+
+.up, .next {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #2c2c2c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.next {
+  right: 20px;
+}
+
+.up {
+  left: 20px;
+}
+
+input[name="up"], input[name="next"] {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+input[name="up"]:checked:placeholder-shown {}
+
+.up:hover, .next:hover {
+  transition: all 1s;
+  width: 50px;
+  height: 50px;
+}
+
+.box-right-z1 {}
+
+label[for="up"] {}
+
+label[for="up"]::after {
+  content: "<";
+  cursor: pointer;
+  color: #2c2c2c;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: cursive;
+}
+
+label[for="next"]::after {
+  content: ">";
+  cursor: pointer;
+  color: #2c2c2c;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: cursive;
+}
+
+.box-left {}
+
+.box-right {}
+
+.z-1 {
+  z-index: 100;
+  background: #f25774;
+}
+
+.box-left-z1 {
+  background: #c73f58;
+}
+
+.box-right-z1 {}
+
+.z-2 {
+  z-index: 90;
+  background: #ffb65b;
+}
+
+.z-3 {
+  z-index: 80;
+  background: #fdda74;
+}
+
+@keyframes up {
+  0% {
+    transform-origin: 0 100% 0;
+  }
+  50% {
+    transform-origin: 0 100% 0;
+    transform: rotate3d(0, 1, 0, 90deg);
+  }
+  100% {
+    transform-origin: 0 100% 0;
+    transform: rotate3d(0, 1, 0, 180deg);
+  }
+}
+
+@keyframes next {
+  0% {
+    transform-origin: 0 100% 0;
+  }
+  50% {
+    transform-origin: 0 100% 0;
+    transform: rotate3d(0, 1, 0, 90deg);
+  }
+  100% {
+    transform-origin: 0 100% 0;
+    transform: rotate3d(0, 1, 0, 180deg);
+  }
+}
